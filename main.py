@@ -2,6 +2,8 @@ import turtle
 turtle.tracer(0,0)
 
 pea_radius = 25
+#this changes the radius for the peas in the pod
+#you can change this to 50, 10, 30 or basically any number
 pod_length = pea_radius*8
 right_angle = 90
 
@@ -11,12 +13,10 @@ r = turtle.right
 l = turtle.left
 up = turtle.up
 down = turtle.down
-#all of these variables make it shorter to direct the turtle 
-# you can change these to any name you want
 
 pensize=2
 #this changes the thickness of the lines in my drawing 
-# it could be 5, 10, or 1
+# it could be 5, 10, or 1, or anything else
 
 turtle.pensize(pensize)
 
