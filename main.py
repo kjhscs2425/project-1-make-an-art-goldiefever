@@ -2,7 +2,7 @@ import turtle
 turtle.tracer(0,0)
 
 pea_radius = 25
-pod_length = 200
+pod_length = pea_radius*8
 right_angle = 90
 
 f = turtle.forward
@@ -11,8 +11,14 @@ r = turtle.right
 l = turtle.left
 up = turtle.up
 down = turtle.down
+#all of these variables make it shorter to direct the turtle 
+# you can change these to any name you want
 
-turtle.pensize(1.5)
+pensize=2
+#this changes the thickness of the lines in my drawing 
+# it could be 5, 10, or 1
+
+turtle.pensize(pensize)
 
 turtle.shape("turtle")
 
@@ -53,12 +59,12 @@ def draw_eyes():
     l(right_angle)
     f(pea_radius/3)
     down()
-    turtle.dot(2.5)
+    turtle.dot(pensize+1)
     up()
     r(right_angle*2)
     f(pea_radius*(2/3))
     down()
-    turtle.dot(2.5)
+    turtle.dot(pensize+1)
     up()
     for k in range(1,3):
         r(right_angle)
@@ -146,7 +152,7 @@ f(pod_length/4)
 r(90)
 
 draw_eyes()
-draw_frown(pea_radius*(2/3))
+draw_frown(pea_radius*(5/7))
 
 up()
 turtle.goto(pea_radius/2,0)
@@ -173,11 +179,10 @@ f(pod_length/4)
 l(90)
 
 draw_soureyes()
-draw_frown(pea_radius*(2/3))
+draw_frown(pea_radius*(5/7))
 
 up()
 turtle.goto(0,0)
 
 turtle.update()
-
 turtle.done()
